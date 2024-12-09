@@ -1,0 +1,43 @@
+.heading {
+  text-align: center;
+}
+
+.nav {
+  display: block;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav .btn {
+  --bd-w: 2px;
+  --pd-b: 10px;
+  --pd-i: calc((var(--pd-b)/2)*3);
+  --bs: 0 0 calc(var(--bd-w)/2) calc(var(--bd-w)/2);
+  
+  background-color: var(--bg);
+  color: inherit;
+  padding: var(--pd-b) var(--pd-i);
+  border-radius: 100vw;
+  border: solid var(--bd-w);
+  border-color: #0AF;
+
+  text-decoration: none;
+  transition: box-shadow 0.25s ease;
+  &:is(:hover, :focus-visible) {
+    box-shadow: var(--bs) var(--bg);
+  }
+  &:not(:visited) {
+    --bg: #0CF;
+  }
+  &:visited {
+    --bg: #0CA;
+    background-color: #0CA;
+    border-color: #0AA;
+  }
+  &:visited:hover, &:visited:focus-visible {
+    display: none;
+    box-shadow: var(--bs) #0CA;
+  }
+}

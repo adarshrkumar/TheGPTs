@@ -1,0 +1,27 @@
+body {
+  margin-inline: auto;
+  max-width: 750px;
+  & > * {
+    text-align: center;
+  }
+}
+button {
+  display: block;
+  margin-inline: auto;
+  width: fit-content;
+}
+
+.photo-area {
+  width: 100%;
+  overflow-y: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+  &.active {
+    max-height: 1000px;
+  }
+  & iframe {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+  }
+}
